@@ -1,0 +1,15 @@
+### which API type to build
+- WebSocket API 
+  - using persistent connections for real-time use cases
+  - use cases
+    - chat applications
+    - dashboard
+- REST API
+  - tranditional request and response
+  - public or private(only available in VPC) ?
+- HTTP API
+  - low-latency and cost-effective REST APIs with built-in features 
+  - use cases
+    - Open ID Connect
+    - OAuth2
+    - native CORS support
