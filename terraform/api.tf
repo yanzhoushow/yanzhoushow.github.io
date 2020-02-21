@@ -59,3 +59,13 @@ resource "aws_api_gateway_method" "methods" {
   authorization = "None"
 }
 
+resource "aws_api_gateway_integration" "integration" {
+  rest_api_id = aws_api_gateway_resource.resources.rest_api_id
+  resource_id = aws_api_gateway_resource.resources.id
+  http_method = aws_api_gateway_method.methods.http_method
+  integration_http_method = "GET"
+  type = "AWS_PROXY"
+  uri = aws_lambda_function.example.invoke_arn
+}
+
+
